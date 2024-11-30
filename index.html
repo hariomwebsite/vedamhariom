@@ -8,38 +8,40 @@
 <meta content="" name="keywords">
 <link href="assets/img/icon.ico" rel="icon">
 <link href="assets/img/icon.ico" rel="apple-touch-icon">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 
 <body>
 <div id="topbar" class="d-flex align-items-center fixed-top">
   <div class="container d-flex justify-content-between">
-    <div class="contact-info d-flex align-items-center"> <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">vedamhariom@gmail.com</a> <i class="bi bi-phone"></i>+91 98418 25754 </div>
+    <div class="contact-info d-flex align-items-center"> <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">vedamhariom@gmail.com</a> <i class="bi bi-phone"></i>+91 98418 25754</div>
     <div class="d-none d-lg-flex social-links align-items-center"><a href="https://www.instagram.com/hariom_vedam/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a> <a href="#" class="youtube"><i class="bi bi-youtube"></i></a> </div>
   </div>
 </div>
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
-    <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/hariom Logo.png" alt="piclogo"></a></h1>
+    <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/hariom_Logo.png" alt="piclogo"></a></h1>
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
         <li><a class="nav-link scrollto" href="#about">About</a></li>
         <li><a class="nav-link scrollto" href="#services">Spiritual Practices</a></li>
-        <li><a class="nav-link scrollto" href="#doctors">Divine Offerings</a></li>
+        <li><a class="nav-link scrollto" href="#departments">Categories</a></li>
+        <li><a class="nav-link scrollto" href="#faq">Facts</a></li>
+        <li><a class="nav-link scrollto" href="#testimonials">Supports</a></li>
+        <li><a class="nav-link scrollto" href="#gallery">Divine Offerings</a></li>
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i> </nav>
-    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a> </div>
+    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a></div>
 </header>
 <section id="hero" class="d-flex align-items-center">
   <div class="container">
@@ -88,12 +90,73 @@
       </div>
     </div>
   </section>
+  <section id="appointment" class="appointment section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Make an Appointment</h2>
+        <p>Look for reputable astrologers or Vedic science practitioners online or in your local area. Mention your interest in astrology and Vedic science and briefly describe your questions. Ensure you receive a confirmation via email, text, or call.</p>
+      </div>
+      <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-8 form-group mt-3">
+            <select name="doctor" id="doctor" class="form-select">
+              <option value="">Select Category</option>
+              <option value="Doctor 1">Wealth</option>
+              <option value="Doctor 2">Health</option>
+              <option value="Doctor 3">Prosperity Related</option>
+              <option value="Doctor 3">Life Realted</option>
+              <option value="Doctor 3">Marriage Related</option>
+              <option value="Doctor 3">Job Related</option>
+              <option value="Doctor 3">Education Related</option>
+              <option value="Doctor 3">Money And Business Related</option>
+              <option value="Doctor 3">Peace of Mind</option>
+              <option value="Doctor 3">Thila Homam</option>
+              <option value="Doctor 3">Bhoo Varaha Homam</option>
+              <option value="Doctor 3">Santana Gopala Homam</option>
+              <option value="Doctor 3">Chandi Homam</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+        </div>
+        <div class="text-center">
+          <button type="submit">Schedule</button>
+        </div>
+      </form>
+    </div>
+  </section>
   <section id="about" class="about">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-5 col-lg-6 video-box d-flex flex-column align-items-stretch justify-content-center">
           <video id="myVideo" controls autoplay>
-            <source id="mp4_src" src="assets/img/Pooja and homam Intro.mp4" type="video/mp4">
+            <source id="mp4_src" src="assets/Pooja_and_homam_Intro.mp4" type="video/mp4">
           </video>
         </div>
         <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
@@ -126,120 +189,41 @@
   <section id="services" class="services">
     <div class="container">
       <div class="section-title">
-        <h2>Homam Ceremonies for Different Life Needs</h2>
+        <h2>Ceremonies for different life needs</h2>
         <p>Homam ceremonies are sacred Vedic rituals tailored to address various aspects of life. From overcoming obstacles and achieving career growth to fostering family harmony and protection, Explore the right Homam for your unique needs and invite spiritual upliftment into every stage of life.</p>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-heartbeat"></i></div>
-            <h4><a href="">Lorem Ipsum</a></h4>
-            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <h4><a href="">Ayusha Homam</a></h4>
+            <p>It is performed on the star (Nakshatra) birth date of completion of 1 year of the child.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-pills"></i></div>
-            <h4><a href="">Sed ut perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <h4><a href="">Ganapathy&nbsp;Homam</a></h4>
+            <p>This Homam  is the deity, who is always worshipped before starting any new venture.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-hospital-user"></i></div>
-            <h4><a href="">Magni Dolores</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-dna"></i></div>
-            <h4><a href="">Nemo Enim</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-wheelchair"></i></div>
-            <h4><a href="">Dele cardo</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-notes-medical"></i></div>
-            <h4><a href="">Divera don</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            <h4><a href="">Maha Mrithyunjaya Homam</a></h4>
+            <p>Here the homam dedicated to Lord Shiva to avoid prolonged sickness and untimely death.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="appointment" class="appointment section-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Make an Appointment</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div>
-      <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
-        <div class="row">
-          <div class="col-md-4 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 form-group mt-3">
-            <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="department" id="department" class="form-select">
-              <option value="">Select Department</option>
-              <option value="Department 1">Department 1</option>
-              <option value="Department 2">Department 2</option>
-              <option value="Department 3">Department 3</option>
-            </select>
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="doctor" id="doctor" class="form-select">
-              <option value="">Select Doctor</option>
-              <option value="Doctor 1">Doctor 1</option>
-              <option value="Doctor 2">Doctor 2</option>
-              <option value="Doctor 3">Doctor 3</option>
-            </select>
-            <div class="validate"></div>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-          <div class="validate"></div>
-        </div>
-        <div class="mb-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-        </div>
-        <div class="text-center">
-          <button type="submit">Make an Appointment</button>
-        </div>
-      </form>
+      <br>
+      <div class="link-info" align="right"><a href="ceremonies.html">See More Services</a></div>
     </div>
   </section>
   <section id="departments" class="departments">
     <div class="container">
       <div class="section-title">
         <h2>Categories of Homam</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>These are&nbsp;integral rituals in Hindu traditions, performed to seek blessings, express gratitude to deities, and fulfill spiritual or material objectives. While both involve prayers and offerings, they differ in practice and purpose</p>
       </div>
       <div class="row gy-4">
         <div class="col-lg-3">
@@ -427,13 +411,18 @@
       </div>
     </div>
   </section>
+    
   <section id="testimonials" class="testimonials">
     <div class="container">
+      <div class="section-title">
+        <h2>Read what our customers say</h2>
+        <p>Discover the experiences of our satisfied customers! Read their reviews and testimonials to see how our services have made a positive impact.Their stories reflect our commitment to quality and customer satisfaction. Explore their feedback and see why so many trust us.</p>
+      </div>
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper col-lg-6 d-flex align-items-stretch">
           <div class="swiper-slide">
             <div class="testimonial-wrap">
-              <div class="testimonial-item"><img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <div class="testimonial-item"><img src="assets/img/testimonials/Ravikumar_CEO.webp" class="testimonial-img" alt="">
                 <h3>Ravi Kumar</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <p> <i class="bx bxs-quote-alt-left quote-icon-left"></i>Hariom Vedam made my Homam ceremony effortless and meaningful. The team was incredibly knowledgeable, and their guidance brought a profound spiritual experience into our home. Everything was organized seamlessly, and we felt the positive energy immediately. <i class="bx bxs-quote-alt-right quote-icon-right"></i> </p>
@@ -442,7 +431,7 @@
           </div>
           <div class="swiper-slide">
             <div class="testimonial-wrap">
-              <div class="testimonial-item"><img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <div class="testimonial-item"><img src="assets/img/testimonials/Archana_Designer.webp" class="testimonial-img" alt="">
                 <h3>Archana Swaminathan</h3>
                 <h4>Designer</h4>
                 <p> <i class="bx bxs-quote-alt-left quote-icon-left"></i>The website is easy to navigate, and booking the Homam was straightforward. The priests were well-versed in Vedic rituals, and the experience brought so much peace to our household. I highly recommend Hariom Vedam to anyone seeking authentic spiritual services.<i class="bx bxs-quote-alt-right quote-icon-right"></i> </p>
@@ -451,7 +440,7 @@
           </div>
           <div class="swiper-slide">
             <div class="testimonial-wrap">
-              <div class="testimonial-item"><img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <div class="testimonial-item"><img src="assets/img/testimonials/Aditi_Incharge.webp" class="testimonial-img" alt="">
                 <h3>Aditi Choudhury</h3>
                 <h4>Store Owner</h4>
                 <p> <i class="bx bxs-quote-alt-left quote-icon-left"></i>The website is easy to navigate, and booking the Ganapati Homam was straightforward. The priests were highly knowledgeable in Vedic rituals, ensuring everything was performed with precision. The sacred chants and rituals infused our home with positivity and serenity. <i class="bx bxs-quote-alt-right quote-icon-right"></i> </p>
@@ -460,7 +449,7 @@
           </div>
           <div class="swiper-slide">
             <div class="testimonial-wrap">
-              <div class="testimonial-item"><img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <div class="testimonial-item"><img src="assets/img/testimonials/Vinay_freelancer.webp" class="testimonial-img" alt="">
                 <h3>Vinay Bhargava</h3>
                 <h4>Freelancer</h4>
                 <p> <i class="bx bxs-quote-alt-left quote-icon-left"></i>The priests were well-versed in Vedic rituals, with a deep understanding of not just the process but also the significance behind each chant and offering. Their guidance during the Homam added immense value to the experience, making it both informative and spiritually fulfilling. <i class="bx bxs-quote-alt-right quote-icon-right"></i> </p>
@@ -469,7 +458,7 @@
           </div>
           <div class="swiper-slide">
             <div class="testimonial-wrap">
-              <div class="testimonial-item"><img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <div class="testimonial-item"><img src="assets/img/testimonials/Murali_Entrepreneur.webp" class="testimonial-img" alt="">
                 <h3>Murali Pradhan</h3>
                 <h4>Entrepreneur</h4>
                 <p> <i class="bx bxs-quote-alt-left quote-icon-left"></i>Hariom Vedam has transformed my spiritual practices. The Pooja and Homam services were so easy to book, and everything was handled with such care and attention to detail.I highly recommend their services to anyone looking to deepen their spiritual journey. <i class="bx bxs-quote-alt-right quote-icon-right"></i> </p>
@@ -485,7 +474,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Gallery</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>These offerings symbolize the devotee’s faith, humility, and connection with the divine. They hold spiritual significance and vary based on cultural, religious, and regional practices. Are Presented to deities or spiritual entities during rituals, worship, or ceremonies as a gesture of devotion, gratitude, or supplication.</p>
       </div>
     </div>
     <div class="container-fluid">
@@ -521,7 +510,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Contact</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>the details provided to identify and connect with an individual, organization, or entity. It typically includes essential information that facilitates communication and provides context about the person or organization. Crafting a description with specific purpose, feel free to share more details, and I can help refine it!</p>
       </div>
     </div>
     <div>
@@ -579,10 +568,10 @@
   <div class="footer-top">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-6 footer-newsletter">
-          <h4>Join Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
+        <div class="footer-newsletter">
+          <h4>Get free subscription from us</h4>
+          <p>Unlock exclusive access with our free subscription! Enjoy premium content, updates, and special offers at no cost.Sign up today to experience all the benefits we have to offer, completely free!</p>
+          <form action="" method="post">
             <input type="email" name="email">
             <input type="submit" value="Subscribe">
           </form>
@@ -592,20 +581,22 @@
   </div>
   <div class="container d-md-flex py-4">
     <div class="me-md-auto text-center text-md-start">
-      <div class="copyright"> &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved </div>
-      <div class="credits"> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> </div>
+      <div class="copyright"> &copy;Copyright<strong><span>Vedam Hari OM.</span></strong> All Rights Reserved </div>
+      <div class="credits">Designed by <a href="https://pisces-24.github.io/piceee/">Sri Guru Graphics And Systems</a></div>
     </div>
-    <div class="social-links text-center text-md-right pt-3 pt-md-0"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0"> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> </div>
   </div>
 </footer>
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> 
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script> 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script> 
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script> 
-<script src="assets/vendor/php-email-form/validate.js"></script> 
-<script src="assets/js/main.js"></script> 
+    
+<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> 
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/php-email-form/validate.js"></script> 
+<script src="assets/js/main.js"></script>
+
 <script>function myFunction() { document.getElementById("mp4_src").src = "movie.mp4"; document.getElementById("myVideo").load(); } </script>
 </body>
 </html>
