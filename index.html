@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="assets/css/categorystyle.css">
 <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
 <link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -124,25 +125,25 @@
         </div>
         <div class="row">
           <div class="col-md-4 form-group mt-3">
-            <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
+            <input type="text" name="birthday" value="10/24/1984"/>
+              <div class="validate"></div>
+           </div>
           <div class="col-md-8 form-group mt-3">
-            <select name="doctor" id="doctor" class="form-select">
+            <select name="category" id="category" class="form-select">
               <option value="">Select Category</option>
-              <option value="Doctor 1">Wealth</option>
-              <option value="Doctor 2">Health</option>
-              <option value="Doctor 3">Prosperity Related</option>
-              <option value="Doctor 3">Life Realted</option>
-              <option value="Doctor 3">Marriage Related</option>
-              <option value="Doctor 3">Job Related</option>
-              <option value="Doctor 3">Education Related</option>
-              <option value="Doctor 3">Money And Business Related</option>
-              <option value="Doctor 3">Peace of Mind</option>
-              <option value="Doctor 3">Thila Homam</option>
-              <option value="Doctor 3">Bhoo Varaha Homam</option>
-              <option value="Doctor 3">Santana Gopala Homam</option>
-              <option value="Doctor 3">Chandi Homam</option>
+              <option value="wealth">Wealth</option>
+              <option value="health">Health</option>
+              <option value="prosperity related">Prosperity Related</option>
+              <option value="life related">Life Realted</option>
+              <option value="marriage related">Marriage Related</option>
+              <option value="job related">Job Related</option>
+              <option value="education related">Education Related</option>
+              <option value="money and business related">Money And Business Related</option>
+              <option value="peace of mind">Peace of Mind</option>
+              <option value="thila homam">Thila Homam</option>
+              <option value="bhoo varaha homam">Bhoo Varaha Homam</option>
+              <option value="santana gopala homam">Santana Gopala Homam</option>
+              <option value="chandi homam">Chandi Homam</option>
             </select>
             <div class="validate"></div>
           </div>
@@ -574,6 +575,24 @@
 <script src="assets/js/isotope.pkgd.min.js"></script> 
 <script src="assets/js/categorymain.js"></script> 
 <script src="assets/js/main.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
 <script>function myFunction() { document.getElementById("mp4_src").src = "movie.mp4"; document.getElementById("myVideo").load(); } </script>
+    
+<script>
+                $(function() {
+                    $('input[name="birthday"]').daterangepicker({
+                        singleDatePicker: true,
+                        showDropdowns: true,
+                        minYear: 1901,
+                        maxYear: parseInt(moment().format('YYYY'),10)
+                            }, function(start, end, label) {
+                                var years = moment().diff(start, 'years');
+                                    alert("You are " + years + " years old!");
+                                    });
+                                });
+</script>
+
 </body>
 </html>
