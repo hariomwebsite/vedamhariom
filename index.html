@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="assets/css/categorystyle.css">
 <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
 <link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css"/>
 </head>
 
 <body>
@@ -51,8 +51,7 @@
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
-</div>
+    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a> </div>
 </header>
 <section id="hero" class="d-flex align-items-center">
   <div class="container">
@@ -80,7 +79,6 @@
                 <div class="icon-box mt-4 mt-xl-0"> <i class="bx bx-receipt"></i>
                   <h4>Spiritual Connection</h4>
                   <p>"Hari Om" is a sacred mantra symbolizing universal energy and the essence of spirituality.
-                  
                   <p>It fosters a sense of peace, balance, and unity.</p>
                 </div>
               </div>
@@ -125,9 +123,9 @@
         </div>
         <div class="row">
           <div class="col-md-4 form-group mt-3">
-            <input type="text" name="birthday" value="10/24/1984"/>
-              <div class="validate"></div>
-           </div>
+            <input type="date" name="date" value="MM/DD/YYYY" />
+            <div class="validate"></div>
+          </div>
           <div class="col-md-8 form-group mt-3">
             <select name="category" id="category" class="form-select">
               <option value="">Select Category</option>
@@ -575,24 +573,20 @@
 <script src="assets/js/isotope.pkgd.min.js"></script> 
 <script src="assets/js/categorymain.js"></script> 
 <script src="assets/js/main.js"></script> 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    
-<script>function myFunction() { document.getElementById("mp4_src").src = "movie.mp4"; document.getElementById("myVideo").load(); } </script>
-    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> 
+<script>function myFunction() { document.getElementById("mp4_src").src = "movie.mp4"; document.getElementById("myVideo").load(); } </script> 
 <script>
                 $(function() {
-                    $('input[name="birthday"]').daterangepicker({
+                    $('input[name="appointment"]').daterangepicker({
                         singleDatePicker: true,
                         showDropdowns: true,
                         minYear: 1901,
                         maxYear: parseInt(moment().format('YYYY'),10)
                             }, function(start, end, label) {
                                 var years = moment().diff(start, 'years');
-                                    alert("You are " + years + " years old!");
                                     });
                                 });
 </script>
-
 </body>
 </html>
