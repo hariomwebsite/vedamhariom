@@ -241,7 +241,6 @@ body:after {
 .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
   font-size: 12px;
   z-index: 20;
-  font-family: "icomoon";
   content: "\f078";
   position: absolute;
   top: 50%;

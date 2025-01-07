@@ -1,6 +1,5 @@
-body {
-  font-family: "Raleway", sans-serif;
-  color: #444444;
+*{
+  font-family: Raleway;
 }
 a {
   color: #CC2127;
@@ -10,8 +9,8 @@ a:hover {
   color: #F26722;
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+p {
+  line-height: 25px;
 }
 #preloader {
   position: fixed;
@@ -110,7 +109,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.5px;
-  font-family: "Raleway", sans-serif;
 }
 #header .logo a {
   color: brown;
@@ -143,7 +141,7 @@ nav {
   margin-top: 150px;
   margin-left: 0px;
   transition: all 0.3s linear;
-    z-index: 996;
+  z-index: 996;
 }
 nav li {
   height: 60px;
@@ -157,7 +155,7 @@ nav li a {
   transition: all .3s linear;
 }
 .bi-instagram {
-  color: #E1306C;    
+  color: #E1306C;
 }
 .bi-instagram:hover {
   color: #F26722;
@@ -203,7 +201,6 @@ nav li a i {
   font-size: 24px;
 }
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
@@ -433,7 +430,6 @@ section {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
 .services .icon-box {
@@ -713,7 +709,6 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -821,8 +816,8 @@ section {
 }
 .gallery .gallery-item {
   overflow: hidden;
-    padding-bottom:15px;
-    padding-top:15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   border-right: 3px solid #fff;
   border-bottom: 3px solid #fff;
 }
