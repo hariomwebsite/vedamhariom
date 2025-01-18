@@ -1,4 +1,5 @@
-*{
+
+* {
   font-family: Raleway;
 }
 a {
@@ -814,19 +815,62 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #CC2127;
 }
-.gallery .gallery-item {
+
+.recent-photos {
   overflow: hidden;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+    margin-left: 20px;
+    margin-right:  20px;
 }
-.gallery .gallery-item img {
-  transition: all ease-in-out 0.9s;
+.recent-photos .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
 }
-.gallery .gallery-item:hover img {
-  transform: scale(1.2);
+
+.swiper-slide a{
+    border-radius: 20px;
 }
+
+.recent-photos .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #F26722;
+}
+.recent-photos .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #CC2127;
+}
+.recent-photos .owl-nav, .recent-photos .owl-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+.recent-photos .owl-item {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.recent-photos .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #95d3ff !important;
+}
+.recent-photos .owl-dot.active {
+  background-color: #CC2127 !important;
+}
+.recent-photos .gallery-carousel .owl-stage-outer {
+  overflow: visible;
+}
+.recent-photos .gallery-carousel .center {
+  border: 6px solid #CC2127;
+  margin: -10px;
+  box-sizing: content-box;
+  padding: 4px;
+  background: #fff;
+  z-index: 1;
+}
+
 .contact .info {
   width: 100%;
   background: #fff;
