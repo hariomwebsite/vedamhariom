@@ -1,10 +1,4 @@
-/**
-* Template Name: Medilab
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -179,12 +173,82 @@
     selector: '.glightbox'
   });
 
-  /**
-   * Initiate Gallery Lightbox 
+      /**
+   * Gallery 
    */
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
+(function ($) {
+  "use strict";
+  $(document).on('ready', function () {
+
+    jQuery(window).on('scroll', function () {
+      if ($(this).scrollTop() > 200) {
+        $('#header .header-inner').addClass("sticky");
+      } else {
+        $('#header .header-inner').removeClass("sticky");
+      }
+    });
+
+    $('.menu').slicknav({
+      prependTo: ".mobile-nav",
+      duration: 300,
+      closeOnClick: true,
+    });
+
+    $('.portfolio-slider').owlCarousel({
+      autoplay: true,
+      autoplayTimeout: 4000,
+      margin: 15,
+      smartSpeed: 300,
+      autoplayHoverPause: true,
+      loop: true,
+      nav: true,
+      dots: false,
+      responsive: {
+        300: {
+          items: 1,
+        },
+        480: {
+          items: 2,
+        },
+        768: {
+          items: 2,
+        },
+        1170: {
+          items: 4,
+        },
+      }
+    });
+
+    var window_width = $(window).width();
+    if (window_width > 767) {
+      new WOW().init();
+    }
+
+    $('.scroll').on("click", function (e) {
+      var anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top - 100
+      }, 1000);
+      e.preventDefault();
+    });
+
+    $.stellar({
+      horizontalOffset: 0,
+      verticalOffset: 0
+    });
+
+    map.addMarker({
+      lat: 23.011245,
+      lng: 90.884780,
+      title: 'Marker with InfoWindow',
+      infoWindow: {
+        content: '<p>welcome to Medipro</p>'
+      }
+
+    });
   });
+})(jQuery);
+
 
   /**
    * Testimonials slider
@@ -215,9 +279,40 @@
     }
   });
 
-  /**
-   * Initiate Pure Counter 
-   */
+  
   new PureCounter();
 
+      new Swiper('.recent-photos-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    }
+  });
+    
 })()
